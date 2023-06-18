@@ -1,11 +1,20 @@
 div.calculator {
-    max-width: 300px;
-    padding: 10px 40px 25px;
-    background-color: #457;
+    max-width: 400px;
+    padding: 30px 40px 25px;
     border-radius: 15px 15px 50px 50px;
     margin-top: 50px;
+}
+
+div.theme1 {
+    background-color: #457;
     border-left: 10px solid#333;
     border-right: 10px solid #333;
+}
+
+div.theme2 {
+    background-color: rgb(201, 29, 178);
+    border-left: 10px solid#3557c5;
+    border-right: 10px solid #3557c5;
 }
 
 div.calculator div.heading {
@@ -30,11 +39,16 @@ div.equation {
 
 div.col-3, div.col-9 {
     padding: 0;
+    height: 5rem;
 }
 
 div.calculator Button {
     font-weight: bold;
-    width: 99%;
+    width: 95%;
     height: 95%;
     padding: 5px 0;
+}
+
+div.calculator Button[value='='] {
+    width: 99%;
 }
