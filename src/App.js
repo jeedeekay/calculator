@@ -59,15 +59,13 @@ function App() {
     return (
         <Container className={`calculator theme${theme}`}>
             <Row>
-                <Col>
-                    <Button onClick={() => themeChanger()}>THEME TOGGLE</Button>
-                </Col>
+                <Button className='theme-button' onClick={() => themeChanger()}>THEME TOGGLE</Button>
             </Row>
-            <Row className='heading'>
+            <Row className={`heading theme${theme}`}>
                 <Col xs >Gavin Instruments</Col>
                 <Col xs >GK-31X</Col>
             </Row>
-            <Row className='readout'>
+            <Row className={`readout theme${theme}`}>
                 <Col xs='12' className='equation'>
                     <p>{display}</p>
                 </Col>
@@ -75,127 +73,137 @@ function App() {
                     <p>{equation}</p>
                 </Col>
             </Row>
-            <Row className='buttonGroup'>
+            <Row className={`buttonGroup theme${theme}`}>
                 <Col xs='3'>
                     <Button
-                        color='light'
                         onClick={() => clear()}
+                        className='clearButtons'
                     >AC</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
-                        color='light'
                         onClick={() => backspace()}
+                        className='clearButtons'
                     >DEL</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
-                        color='warning'
                         value={'+'}
                         onClick={(ev) => tally(ev)}
+                        className='operator'
                     >+</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
-                        color='warning'
                         value={'-'}
                         onClick={(ev) => tally(ev)}
+                        className='operator'
                     >-</Button>
                 </Col>
             </Row>
-            <Row>
+            <Row className={`buttonGroup theme${theme}`}>
                 <Col xs='3'>
                     <Button
                         value={7}
                         onClick={(ev) => tally(ev)}
+                        className='integer'
                     >7</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
                         value={8}
                         onClick={(ev) => tally(ev)}
+                        className='integer'
                     >8</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
                         value={9}
                         onClick={(ev) => tally(ev)}
+                        className='integer'
                     >9</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
-                        color='warning'
                         value={'*'}
                         onClick={(ev) => tally(ev)}
+                        className='operator'
                     >x</Button>
                 </Col>
             </Row>
-            <Row>
+            <Row className={`buttonGroup theme${theme}`}>
                 <Col xs='3'>
                     <Button
                         value={4}
                         onClick={(ev) => tally(ev)}
+                        className='integer'
                     >4</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
                         value={5}
                         onClick={(ev) => tally(ev)}
+                        className='integer'
                     >5</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
                         value={6}
                         onClick={(ev) => tally(ev)}
+                        className='integer'
                     >6</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
-                        color='warning'
                         value={'/'}
                         onClick={(ev) => tally(ev)}
+                        className='operator'
                     >÷</Button>
                 </Col>
             </Row>
-            <Row>
+            <Row className={`buttonGroup theme${theme}`}>
                 <Col xs='3'>
                     <Button
                         value={1}
                         onClick={(ev) => tally(ev)}
+                        className='integer'
                     >1</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
                         value={2}
                         onClick={(ev) => tally(ev)}
+                        className='integer'
                     >2</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
                         value={3}
                         onClick={(ev) => tally(ev)}
+                        className='integer'
                     >3</Button>
                 </Col>
                 <Col xs='3'>
                     <Button
-                        color='info'
                         value={'.'}
                         onClick={(ev) => tally(ev)}
+                        className='decimal'
                     >.</Button>
                 </Col>
             </Row>
-            <Row>
+            <Row className={`buttonGroup theme${theme}`}>
                 <Col xs='3'>
                     <Button
                         value={0}
                         onClick={(ev) => tally(ev)}
+                        className='integer'
                     >0</Button>
                 </Col>
                 <Col xs='9'>
                     <Button
-                        color='danger'
                         value={'='}
                         onClick={(ev) => calculate(ev)}
+                        className='equalOperator'
                     >=</Button>
                 </Col>
             </Row>

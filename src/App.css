@@ -1,3 +1,4 @@
+/* Structural Styling */
 div.calculator {
     max-width: 400px;
     padding: 30px 40px 25px;
@@ -5,16 +6,8 @@ div.calculator {
     margin-top: 50px;
 }
 
-div.theme1 {
-    background-color: #457;
-    border-left: 10px solid#333;
-    border-right: 10px solid #333;
-}
-
-div.theme2 {
-    background-color: rgb(201, 29, 178);
-    border-left: 10px solid#3557c5;
-    border-right: 10px solid #3557c5;
+button.theme-button {
+    margin: 0 auto;
 }
 
 div.calculator div.heading {
@@ -23,7 +16,6 @@ div.calculator div.heading {
 }
 
 div.readout {
-    border: 1px solid #ccc;
     background-color: #ccc;
     height: 100px;
     margin-bottom: 5px;
@@ -51,4 +43,66 @@ div.calculator Button {
 
 div.calculator Button[value='='] {
     width: 99%;
+}
+
+/* Theme 1 */
+.calculator.theme1 {
+    background-color: #457;
+    border-left: 10px solid#333;
+    border-right: 10px solid #333;
+}
+
+.buttonGroup.theme1 button.clearButtons {
+    background-color: #dddddd;
+    color: black;
+}
+
+.buttonGroup.theme1 button.operator {
+    background-color: #ffc524;
+    color: black;
+}
+
+.buttonGroup.theme1 button.integer {
+    background-color: #888;
+}
+
+.buttonGroup.theme1 button.decimal {
+    background-color: #5fdef5;
+    color: #000000;
+}
+
+.buttonGroup.theme1 button.equalOperator {
+    background-color: #e02f2f;
+    color: #ffffff;
+}
+
+/* Theme 2 */
+.calculator.theme2 {
+    background-color: rgb(29, 201, 158);
+    border-left: 10px solid#3557c5;
+    border-right: 10px solid #3557c5;
+}
+
+.buttonGroup.theme2 button.clearButtons {
+    background-color: #3557c5;
+}
+
+.buttonGroup.theme2 button.operator {
+    background-color: #ee9024;
+    color: rgb(255, 255, 255);
+}
+
+.buttonGroup.theme2 button.integer {
+    background-color: #d439c0;
+    color: rgb(255, 255, 255);
+}
+
+.buttonGroup.theme2 button.decimal {
+    background-color: #000;
+    color: #fff;
+}
+
+.buttonGroup.theme2 button.equalOperator {
+    background-color: #fff242;
+    color: #000;
 }
