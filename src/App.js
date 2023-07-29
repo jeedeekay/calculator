@@ -20,11 +20,11 @@ function App() {
             }
             const total = parse(equation.join(''));
             console.log(total);
-            if (total || total === 0) {
+            if (total && total !== Infinity || total === 0) {
                 console.log('cleared number check')
                 return setDisplay(total);
             }
-            setDisplay('ERROR');
+            setDisplay("Can't divide by zero");
         }
     }
 
